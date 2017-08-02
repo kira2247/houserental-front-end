@@ -1,3 +1,4 @@
+
 module.exports = {
 	entry: "./src/index.js",
 
@@ -16,7 +17,8 @@ module.exports = {
 				test: /\.js$/,
 				exclude: /node_module/,
 				use: "babel-loader"
-			}
+			},
+			{ test: /\.json$/, use: 'json-loader' }
 		],
 		loaders: [{
 	      	exclude: /node_modules/,
@@ -29,6 +31,12 @@ module.exports = {
 
 	resolve: {
     	extensions: ['.js', '.jsx']
+  	},
+	node: {
+    console: false,
+    fs: "empty",
+    net: "empty",
+    tls: "empty"
   	},
 
   	devServer: {
