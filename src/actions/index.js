@@ -30,7 +30,7 @@ import axios from 'axios';
 import _ from 'lodash';
 import $ from 'jquery';
 
-const ROOT_URL = 'http://localhost:3000';
+const ROOT_URL = 'https://houserental-server.herokuapp.com';
 const token = localStorage.getItem('token')? '?token=' + localStorage.getItem('token') : '';
 
 export function forceOut() {

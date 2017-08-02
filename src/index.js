@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Link, Switch} from 'react-router-dom';
 import reduxThunk from 'redux-thunk';
 
 import Header from './components/header';
+import HomePage from './components/homepage'
 import CreateHForm from './components/house/createHForm';
 import CreateRForm from './components/house/createRForm';
 import CreateRecordForm from './components/house/createRecordForm';
@@ -35,7 +36,7 @@ ReactDOM.render(
   		<div>
         <Header/>
         <Switch>
-          <Route exact path="/" component={Houses}/>
+          <Route exact path="/" component={HomePage}/>
           <Route exact path="/houses" component={Houses}/>
     			<Route exact path="/houses/create" component={RequireAuth(CreateHForm)}/>
           <Route exact path="/houses/edit/:houseid" component={RequireAuth(CreateHForm)}/>

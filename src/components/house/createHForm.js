@@ -59,7 +59,7 @@ class createHForm extends Component {
 	renderAlert() {
 		if (this.props.errorMessage) {
 			return (
-				<div className="alert alert-danger">
+				<div className="col-xs-8 alert alert-danger">
 					<strong>Oops!</strong> {this.props.errorMessage}
 				</div>
 			)
